@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choir Rehearsals characters: model-viewer</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+  body { margin: 0; background: #0b1020; color: #ddd; font: 14px ui-monospace, monospace; }
+  .row { display: flex; flex-wrap: wrap; }
+  figure { margin: 0; flex: 1 1 280px; text-align: center; }
+  model-viewer { width: 100%; height: 70vh; }
+  figcaption { padding: 8px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <figure><model-viewer src="../glb/choir_prym.glb" camera-controls autoplay animation-name="pose_conduct" alt="Prym"></model-viewer><figcaption>Prym</figcaption></figure>
+  <figure><model-viewer src="../glb/choir_basso.glb" camera-controls autoplay animation-name="pose_bow" alt="Basso"></model-viewer><figcaption>Basso</figcaption></figure>
+  <figure><model-viewer src="../glb/choir_echo.glb" camera-controls autoplay animation-name="pose_head_tilt" alt="Echo"></model-viewer><figcaption>Echo</figcaption></figure>
+</div>
+</body>
+</html>
