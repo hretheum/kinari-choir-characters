@@ -52,13 +52,13 @@ Measured from the GLB files themselves.
 ```js
 const gltf = await new GLTFLoader().loadAsync('glb/choir_echo.glb');
 const mixer = new THREE.AnimationMixer(gltf.scene);
-mixer.clipAction(THREE.AnimationClip.findByName(gltf.animations, 'pose_bow')).play();
+mixer.clipAction(THREE.AnimationClip.findByName(gltf.animations, 'pose_note')).play();
 ```
 
 **`<model-viewer>`.** See [`examples/model-viewer.html`](examples/model-viewer.html).
 
 ```html
-<model-viewer src="glb/choir_echo.glb" camera-controls animation-name="pose_bow"></model-viewer>
+<model-viewer src="glb/choir_echo.glb" camera-controls animation-name="pose_note"></model-viewer>
 ```
 
 **Godot.** Drop the GLB into the project; Godot 4 imports glTF natively and exposes the poses in an `AnimationPlayer`.
