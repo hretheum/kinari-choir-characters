@@ -18,9 +18,9 @@ Three game-ready 3D characters from **Choir Rehearsals**, a series of short nigh
 
 | File | Size (bytes) | SHA-256 |
 |---|---|---|
-| `glb/choir_prym.glb` | 1347888 | `3eb7188c49791d2c7d47a93b6d0a12de41d5232675d8ee0e3cd11df34a2e421f` |
-| `glb/choir_basso.glb` | 1430084 | `d3b96ac5c7d3507a8a535230b0841d47e6653e387184dfc38c64a3ab8e544014` |
-| `glb/choir_echo.glb` | 1459356 | `2f73fa6416832e0076432c3e0f499d83e842cb7ca5acdbe044dbaf1e40b5e16b` |
+| `glb/choir_prym.glb` | 1346500 | `66315a0719f77759693613f9561034c00e1625e79ce478744cd7d6132f4819bc` |
+| `glb/choir_basso.glb` | 1428740 | `2a6e04a66a308f868252cc9d94045b56290b28d2fb342ea60eb195c8f25bf4fc` |
+| `glb/choir_echo.glb` | 1456140 | `6d57ad9c97821c1ed759da4680b8d695eefeb2daf4deeb1d424cdd15a43b648c` |
 
 Verify with `shasum -a 256 -c SHA256SUMS`. A zip with the three GLBs, this README, the licence and the credits is attached to each release (`choir-v1.0.0.zip`).
 
