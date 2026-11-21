@@ -18,11 +18,11 @@ Three game-ready 3D characters from **Choir Rehearsals**, a series of short nigh
 
 | File | Size (bytes) | SHA-256 |
 |---|---|---|
-| `glb/choir_prym.glb` | 1346500 | `66315a0719f77759693613f9561034c00e1625e79ce478744cd7d6132f4819bc` |
-| `glb/choir_basso.glb` | 1428740 | `2a6e04a66a308f868252cc9d94045b56290b28d2fb342ea60eb195c8f25bf4fc` |
-| `glb/choir_echo.glb` | 1456140 | `6d57ad9c97821c1ed759da4680b8d695eefeb2daf4deeb1d424cdd15a43b648c` |
+| `glb/choir_prym.glb` | 1346624 | `efa86b618b3091c0e9256a4fc6d1a6f91c5d6ea4df304a0e2ef60e0aa7caa929` |
+| `glb/choir_basso.glb` | 1428864 | `5d67ec3843c7e945ba0ce43b93f3b070b3325bf905f694ca0d5f7f3d4129b2b6` |
+| `glb/choir_echo.glb` | 1456268 | `5054b4f95788a3f56c8e03aaf375a30ca210efe23a86e6f149cbcbb307a95eab` |
 
-Verify with `shasum -a 256 -c SHA256SUMS`. A zip with the three GLBs, this README, the licence and the credits is attached to each release (`choir-v1.0.0.zip`).
+Verify with `shasum -a 256 -c SHA256SUMS`. A zip with the three GLBs, this README, the licence and the credits is attached to each release (`choir-v<version>.zip`, e.g. `choir-v1.1.0.zip`).
 
 ## Rig details
 
@@ -37,10 +37,10 @@ Measured from the GLB files themselves.
 | Textures | colour 2048 px, normal 2048 px, eye emission 1024 px | same | same |
 | Animations | 9 | 9 | 9 |
 
-- Texture images are embedded in the GLB as JPEG. Materials use base colour and normal maps; the eye material also has an emission map (the eyes glow amber).
+- Texture images are embedded in the GLB as JPEG. Materials use base colour and normal maps; the eye material also has an emission map (the eyes glow amber) at emissive strength 3 (`KHR_materials_emissive_strength`).
 - Bones: `root`, `pelvis`, `spine`, `neck`, `head`, `jaw`, `lid_L`, `lid_R`, and left and right `arm`, `forearm`, `hand`, `thigh`, `shin`, `foot`. One bone per rigid part.
 - The 9 poses are glTF animations with the same names on all three characters: `pose_rest`, `pose_note`, `pose_bow`, `pose_bow_stuck`, `pose_conduct`, `pose_head_tilt`, `pose_jaw_stuck`, `pose_listen`, `pose_caught`.
-- Exported from Blender 5.3 with the Khronos glTF I/O add-on (glTF 2.0, no extensions).
+- Exported from Blender 5.3 with the Khronos glTF I/O add-on (glTF 2.0; one extension, `KHR_materials_emissive_strength`, on the eye material). Viewers without it show the eyes at strength 1, as in v1.0.0.
 - These are game models, not watertight print models. Expect to close holes and add thickness before 3D printing.
 
 ## How to use
@@ -64,6 +64,11 @@ mixer.clipAction(THREE.AnimationClip.findByName(gltf.animations, 'pose_note')).p
 **Godot.** Drop the GLB into the project; Godot 4 imports glTF natively and exposes the poses in an `AnimationPlayer`.
 
 **Unity.** Add the [glTFast](https://github.com/atteneder/glTFast) package (Package Manager, `com.unity.cloud.gltfast`), then drop the GLB into `Assets`. The rig has 20 bones, one per rigid part.
+
+## Changes
+
+- **v1.1.0** (2026-11-21): the eyes glow three times brighter, as in the Pilot's premiere version (`KHR_materials_emissive_strength` = 3 on the eye material). Geometry, rig, textures and poses unchanged.
+- **v1.0.0** (2026-11-20): first release.
 
 ## Licence
 
